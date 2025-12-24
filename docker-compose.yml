@@ -1,0 +1,16 @@
+services:
+    salonro-front:
+        image: salonro-front:${VERSION}
+        container_name: salonro-front
+        #        build: #just if we have internet uncomment
+        #            context: .
+        #            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        env_file:
+            - .env
+        restart: unless-stopped
+    #        volumes:
+    #            - .:/app # کل پروژه mount شده به /app در کانتینر
+    #            - /app/node_modules # node_modules داخل کانتینر بماند تا با host override نشود
+    #            - /app/.next # next داخل کانتینر بماند تا با host override نشود
