@@ -10,6 +10,7 @@ import Modal from "@/components/UI/Modal";
 import ToastProvider from "@/utils/ToastProvider";
 import { Sidebar } from "@/components/SideBar";
 import { AppShell } from "@/providers/AppShell";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
     title: {
@@ -17,17 +18,27 @@ export const metadata: Metadata = {
         default: "سالن رو",
     },
     description: "وب سایت سالن رو",
+    applicationName: "سالنرو",
+
     authors: {
         name: "شرکت میرفران تک",
         url: "https://menulita.ir",
     },
 
-    manifest: "/manifest.json",
+    manifest: "/manifest.webmanifest",
+
     icons: {
         icon: "/logo/192px.png",
         apple: "/logo/512px.png",
     },
+
+    appleWebApp: {
+        capable: true,
+        statusBarStyle: "default",
+        title: "سالنرو",
+    },
 };
+
 export const viewport = {
     width: "device-width",
     initialScale: 1,
@@ -40,6 +51,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     return (
         <html lang={locale} dir="rtl">
             <body>
+                <ServiceWorkerRegister />
                 <NextTopLoader color="#16a795" />
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <ClientAppProvider>

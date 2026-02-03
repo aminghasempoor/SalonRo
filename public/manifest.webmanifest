@@ -1,38 +1,40 @@
 {
-    "id": "/",
-    "name": "سامانه 141",
-    "short_name": "141",
-    "description": "مرکز مدیریت راه های کشور",
+    "id": "salonro-app",
+    "name": "سالنرو",
+    "short_name": "سالنرو",
+    "description": "مدیریت رزرواسیون",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "orientation": "portrait",
     "theme_color": "#283618",
     "background_color": "#ffffff",
     "icons": [
         {
-            "src": "logo/144px.png",
+            "src": "/logo/144px.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "logo/152px.png",
+            "src": "/logo/152px.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "logo/192px.png",
+            "src": "/logo/192px.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "logo/384px.png",
+            "src": "/logo/384px.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "logo/512px.png",
+            "src": "/logo/512px.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
