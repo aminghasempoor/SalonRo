@@ -114,3 +114,89 @@ body {
 .maplibregl-popup-tip {
     display: none !important;
 }
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: "Ravi", sans-serif;
+}
+
+:root {
+    --color-map-bg: var(--color-surface);
+    --color-pwa-primary: var(--color-primary-100);
+    --color-pwa-text: var(--color-text-primary);
+    --color-navbar-dot: var(--color-gray-400);
+}
+
+@theme {
+    /* =====================
+       Primary (Purple)
+    ====================== */
+    --color-primary-100: #7d34b9;
+    --color-primary-200: #9a5cff;
+    --color-primary-300: #b38bff;
+    --color-primary-400: #d1c2ff;
+    --color-primary-500: #ede9ff;
+
+    /* =====================
+       Background & Surface
+    ====================== */
+    --color-bg: #ffffff;
+    --color-surface: #f8f9fb;
+    --color-card: #ffffff;
+    --color-border: #e5e7eb;
+
+    /* =====================
+       Text
+    ====================== */
+    --color-text-primary: #111827;
+    --color-text-secondary: #6b7280;
+    --color-text-muted: #9ca3af;
+
+    /* =====================
+       State colors
+    ====================== */
+    --color-success: #22c55e;
+    --color-warning: #facc15;
+    --color-error: #ef4444;
+    --color-info: #0ea5e9;
+
+    /* =====================
+       Gray scale
+    ====================== */
+    --color-gray-50: #fcfcfc;
+    --color-gray-100: #f5f5f5;
+    --color-gray-200: #f0f0f0;
+    --color-gray-300: #d9d9d9;
+    --color-gray-400: #bfbfbf;
+    --color-gray-500: #8c8c8c;
+    --color-gray-600: #595959;
+    --color-gray-700: #454545;
+    --color-gray-800: #262626;
+    --color-gray-900: #1f1f1f;
+}
+
+[data-theme="dark"] {
+    --color-bg: #121212;
+    --color-surface: #181818;
+    --color-card: #1f1f1f;
+    --color-border: #2a2a2a;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #d1d5db;
+    --color-text-muted: #9ca3af;
+
+    --color-primary-100: #b38bff;
+    --color-primary-200: #9a5cff;
+    --color-primary-300: #7d34b9;
+
+    --color-gray-50: #1f1f1f;
+    --color-gray-100: #262626;
+    --color-gray-200: #2a2a2a;
+    --color-gray-300: #404040;
+    --color-gray-400: #525252;
+    --color-gray-500: #737373;
+    --color-gray-600: #a3a3a3;
+    --color-gray-700: #d4d4d4;
+    --color-gray-800: #e5e5e5;
+    --color-gray-900: #fafafa;
+}
