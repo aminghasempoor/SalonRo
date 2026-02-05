@@ -50,7 +50,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     const messages = await getMessages({ locale });
     return (
         <html lang={locale} dir="rtl">
-            <body>
+            <body
+                style={{
+                    backgroundColor: "var(--color-map-bg)",
+                }}
+            >
                 <ServiceWorkerRegister />
                 <NextTopLoader color="#16a795" />
                 <NextIntlClientProvider locale={locale} messages={messages}>

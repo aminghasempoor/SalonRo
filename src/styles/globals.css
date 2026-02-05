@@ -153,6 +153,11 @@ body {
     --color-text-muted: #9ca3af;
 
     /* =====================
+        home page banner color
+    =========================*/
+    --color-home-page-banner: #ede9ff;
+
+    /* =====================
        State colors
     ====================== */
     --color-success: #22c55e;
@@ -188,6 +193,11 @@ body {
     --color-primary-100: #b38bff;
     --color-primary-200: #9a5cff;
     --color-primary-300: #7d34b9;
+
+    /* =====================
+        home page banner color
+    =========================*/
+    --color-home-page-banner: #1d1c1d;
 
     --color-gray-50: #1f1f1f;
     --color-gray-100: #262626;
