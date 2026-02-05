@@ -71,7 +71,7 @@ export default function LocationMarker({ location, onDragEnd }: Props) {
                             className="absolute -bottom-4.5 z-[-1] size-1.5 rounded-full bg-black shadow-md"
                         />
                     )}
-                        <MarkerIcon className="text-neo-aqua size-8" />
+                    <MarkerIcon className="text-neo-aqua size-8" />
                 </motion.div>
             </AnimatePresence>
         </Marker>

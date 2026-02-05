@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Map, MapLayerMouseEvent } from "@vis.gl/react-maplibre";
 import { ReactNode, useMemo } from "react";
 import maplibregl from "maplibre-gl";
