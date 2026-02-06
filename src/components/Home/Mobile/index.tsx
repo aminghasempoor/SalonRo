@@ -1,3 +1,7 @@
+
 export default function MobileHome() {
-    return <></>;
+    return (
+        <div className="h-full w-full">
+        </div>
+    );
 }
