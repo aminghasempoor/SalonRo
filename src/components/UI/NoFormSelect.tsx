@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from "@/components/UI/Select";
-import {motion} from "framer-motion";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/UI/Select";
+import { motion } from "framer-motion";
 
 interface Option {
     value: string | number;
@@ -19,14 +19,14 @@ interface ReusableSelectProps {
 }
 
 const NoFormSelect: React.FC<ReusableSelectProps> = ({
-                                                         value,
-                                                         onChange,
-                                                         options,
-                                                         loading = false,
-                                                         error = null,
-                                                         placeholder = "انتخاب کنید",
-                                                         onOpen,
-                                                     }) => {
+    value,
+    onChange,
+    options,
+    loading = false,
+    error = null,
+    placeholder = "انتخاب کنید",
+    onOpen,
+}) => {
     return (
         <Select
             value={value?.toString() || ""}
@@ -35,13 +35,10 @@ const NoFormSelect: React.FC<ReusableSelectProps> = ({
                 if (open && onOpen) onOpen();
             }}
         >
-            <SelectTrigger
-                className={`"text-black placeholder-black w-full overflow-x-scroll rounded-lg `}
-            >
-                <SelectValue placeholder={placeholder}/>
+            <SelectTrigger className={`"text-black w-full overflow-x-scroll rounded-lg placeholder-black`}>
+                <SelectValue placeholder={placeholder} />
             </SelectTrigger>
-            <SelectContent
-                className="bg-card overflow-y-auto rounded-xl border-0 shadow-lg">
+            <SelectContent className="bg-card overflow-y-auto rounded-xl border-0 shadow-lg">
                 {loading && (
                     <SelectItem value="loading" disabled>
                         در حال بارگذاری...
@@ -55,8 +52,8 @@ const NoFormSelect: React.FC<ReusableSelectProps> = ({
                 {!loading && !error && (
                     <>
                         <motion.div
-                            whileHover={{scale: 1.05}}
-                            whileTap={{scale: 0.95}}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                             className="rounded px-2 py-1"
                         >
                             <SelectItem
@@ -69,8 +66,8 @@ const NoFormSelect: React.FC<ReusableSelectProps> = ({
                         {options.map((opt) => (
                             <motion.div
                                 key={opt.value}
-                                whileHover={{scale: 1.05}}
-                                whileTap={{scale: 0.95}}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                                 className="rounded px-2 py-1"
                             >
                                 <SelectItem

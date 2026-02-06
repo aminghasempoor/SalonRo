@@ -7,7 +7,7 @@ import DatePickerField from "@/components/UI/DatePickerField";
 const options = [
     { label: "Home", value: "home" },
     { label: "Search", value: "search" },
-]
+];
 
 export default function SearchBar() {
     const openModal = useModalStore((s) => s.openModal);
@@ -26,16 +26,21 @@ export default function SearchBar() {
 
             {/* تاریخ */}
             <SearchItem icon={<CalenderIcon className="size-5" />}>
-                <DatePickerField name="bill_of_lading_date" setValue={()=>{
-                    console.log("hello DatePickerField")}} />
+                <DatePickerField
+                    name="bill_of_lading_date"
+                    setValue={() => {
+                        console.log("hello DatePickerField");
+                    }}
+                />
             </SearchItem>
 
             {/* دسته بندی */}
             <SearchItem icon={<SearchIcon className="size-5" />}>
                 <NoFormSelect
                     value={""}
-                    onChange={()=>{
-                        console.log("hello")}}
+                    onChange={() => {
+                        console.log("hello");
+                    }}
                     options={options}
                     loading={false}
                     error={null}

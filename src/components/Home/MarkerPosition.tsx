@@ -8,9 +8,7 @@ const createMarkerElement = (preview: boolean) => {
     const el = document.createElement("div");
     const Icon = preview ? MarkerPreviewIcon : MarkerIcon;
 
-    el.innerHTML = renderToStaticMarkup(
-        <Icon className="size-10 text-neo-aqua" />
-    );
+    el.innerHTML = renderToStaticMarkup(<Icon className="text-neo-aqua size-10" />);
 
     return el;
 };

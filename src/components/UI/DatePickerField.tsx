@@ -48,9 +48,7 @@ export default function DatePickerField<T extends Record<string, any>>({
                     <button
                         type="button"
                         onClick={() => setOpen(true)}
-                        className={
-                            "text-black rounded-lg px-3 text-start focus:outline-none"
-                        }
+                        className={"rounded-lg px-3 text-start text-black focus:outline-none"}
                     >
                         {date ? formatJalali(date) : "تاریخ"}
                     </button>

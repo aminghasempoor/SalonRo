@@ -2,8 +2,8 @@
 import MainMap from "@/components/MainMap";
 import { motion, AnimatePresence } from "framer-motion";
 import LocationMarker from "./LocationMarker";
-import {useModalStore} from "@/stores/useModalStore";
-import {CloseIcon} from "@/assets";
+import { useModalStore } from "@/stores/useModalStore";
+import { CloseIcon } from "@/assets";
 import MarkerPosition from "@/components/Home/MarkerPosition";
 
 const backdropVariants = {
