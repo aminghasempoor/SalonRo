@@ -1,3 +1,4 @@
+"use client"
 import { MarkerIcon, MarkerPreviewIcon } from "@/assets";
 import { useMap } from "@vis.gl/react-maplibre";
 import maplibregl from "maplibre-gl";
@@ -8,7 +9,7 @@ const createMarkerElement = (preview: boolean) => {
     const el = document.createElement("div");
     const Icon = preview ? MarkerPreviewIcon : MarkerIcon;
 
-    el.innerHTML = renderToStaticMarkup(<Icon className="text-neo-aqua size-10" />);
+    el.innerHTML = renderToStaticMarkup(<Icon className="text-primary-100 size-10" />);
 
     return el;
 };
@@ -19,7 +20,7 @@ type Props = {
 };
 
 const MarkerPosition = ({ preview = false, onChange }: Props) => {
-    const { homePageMap } = useMap();
+    const { current : homePageMap} = useMap();
     const markerRef = useRef<maplibregl.Marker | null>(null);
 
     useEffect(() => {
@@ -49,10 +50,10 @@ const MarkerPosition = ({ preview = false, onChange }: Props) => {
             });
         };
 
-        map.on("moveend", onMove);
+        map.on("move", onMove);
 
         return () => {
-            map.off("moveend", onMove);
+            map.off("move", onMove);
             markerRef.current?.remove();
             markerRef.current = null;
         };
