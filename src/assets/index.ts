@@ -17,3 +17,5 @@ export { default as CalenderIcon } from "&/icons/calender.svg";
 export { default as LocationIcon } from "&/icons/location.svg";
 export { default as MarkerIcon } from "&/icons/marker-icon.svg";
 export { default as MarkerPreviewIcon } from "&/icons/marker-preview.svg";
+export { default as ArrowRight } from "&/icons/arrow-right.svg";
+export { default as ArrowLeft } from "&/icons/arrow-left.svg";

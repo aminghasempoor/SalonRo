@@ -7,7 +7,7 @@ import useEmblaCarousel, {
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/UI/button"
-import {ChevronIcon} from "@/assets";
+import {ArrowLeft, ArrowRight, ChevronIcon} from "@/assets";
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -138,7 +138,7 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
     return (
         <div
             ref={carouselRef}
-            className="overflow-hidden"
+            className="overflow-hidden border border-text-primary/10 p-1 rounded-2xl"
             data-slot="carousel-content"
         >
             <div
@@ -185,7 +185,7 @@ function CarouselPrevious({
             variant={variant}
             size={size}
             className={cn(
-                "rounded-full absolute touch-manipulation",
+                "rounded-xl p-5 absolute touch-manipulation bg-card border border-primary-300",
                 orientation === "horizontal"
                     ? "top-1/2 -left-12 -translate-y-1/2"
                     : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -195,7 +195,7 @@ function CarouselPrevious({
             onClick={scrollPrev}
             {...props}
         >
-            <ChevronIcon className="cn-rtl-flip" />
+            <ArrowLeft className="text-text-primary" />
             <span className="sr-only">Previous slide</span>
         </Button>
     )
@@ -215,7 +215,7 @@ function CarouselNext({
             variant={variant}
             size={size}
             className={cn(
-                "rounded-full absolute touch-manipulation",
+                "rounded-xl p-5 absolute touch-manipulation bg-card border-primary-300",
                 orientation === "horizontal"
                     ? "top-1/2 -right-12 -translate-y-1/2"
                     : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -225,7 +225,7 @@ function CarouselNext({
             onClick={scrollNext}
             {...props}
         >
-            <ChevronIcon className="cn-rtl-flip rotate-180" />
+            <ArrowRight className="text-text-primary size-5" />
             <span className="sr-only">Next slide</span>
         </Button>
     )
