@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { MarkerIcon, MarkerPreviewIcon } from "@/assets";
 import { useMap } from "@vis.gl/react-maplibre";
 import maplibregl from "maplibre-gl";
@@ -20,7 +20,7 @@ type Props = {
 };
 
 const MarkerPosition = ({ preview = false, onChange }: Props) => {
-    const { current : homePageMap} = useMap();
+    const { current: homePageMap } = useMap();
     const markerRef = useRef<maplibregl.Marker | null>(null);
 
     useEffect(() => {

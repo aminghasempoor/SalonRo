@@ -1,21 +1,15 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/UI/card"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/UI/Carousel"
-import { categories } from "@/data/mockCategories"
-import Image from "next/image"
-import {easeOut, motion} from "framer-motion"
+import { Card, CardContent } from "@/components/UI/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/UI/Carousel";
+import { categories } from "@/data/mockCategories";
+import Image from "next/image";
+import { easeOut, motion } from "framer-motion";
 
 type Props = {
-    title: string
-    description: string
-}
+    title: string;
+    description: string;
+};
 
 const containerVariants = {
     hidden: {},
@@ -24,7 +18,7 @@ const containerVariants = {
             staggerChildren: 0.08,
         },
     },
-}
+};
 
 const itemVariants = {
     hidden: {
@@ -41,59 +35,40 @@ const itemVariants = {
             ease: easeOut,
         },
     },
-}
+};
 
 export function CarouselComponent({ title, description }: Props) {
     return (
         <div className="relative w-full">
-
             <Carousel dir="rtl" className="w-full" opts={{ direction: "rtl" }}>
-
                 {/* 🔥 Animated Header */}
                 <motion.div
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="flex items-center justify-between w-full h-full my-5"
+                    className="my-5 flex h-full w-full items-center justify-between"
                 >
-          <span className="flex items-center justify-center gap-x-2">
-            <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: 64 }}
-                transition={{ duration: 0.5 }}
-                className="bg-primary-100 w-4 rounded-2xl rounded-tr-none"
-            />
-            <div>
-              <p className="text-lg font-semibold">{title}</p>
-              <p className="text-muted-foreground">{description}</p>
-            </div>
-          </span>
+                    <span className="flex items-center justify-center gap-x-2">
+                        <motion.div
+                            initial={{ height: 0 }}
+                            animate={{ height: 64 }}
+                            transition={{ duration: 0.5 }}
+                            className="bg-primary-100 w-4 rounded-2xl rounded-tr-none"
+                        />
+                        <div>
+                            <p className="text-lg font-semibold">{title}</p>
+                            <p className="text-muted-foreground">{description}</p>
+                        </div>
+                    </span>
                 </motion.div>
 
                 {/* 🔥 Animated Carousel Items */}
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="show"
-                >
+                <motion.div variants={containerVariants} initial="hidden" animate="show">
                     <CarouselContent>
                         {categories.map((category) => (
                             <CarouselItem
                                 key={category.id}
-                                className="
-                  md:basis-1/5
-                  lg:basis-1/7
-                  relative
-                  after:content-['']
-                  after:absolute
-                  after:top-1/2
-                  after:-translate-y-1/2
-                  after:left-2
-                  after:w-px
-                  after:h-[50%]
-                  after:bg-border
-                  last:after:hidden
-                "
+                                className="after:bg-border relative after:absolute after:top-1/2 after:left-2 after:h-[50%] after:w-px after:-translate-y-1/2 after:content-[''] last:after:hidden md:basis-1/5 lg:basis-1/7"
                             >
                                 <motion.div variants={itemVariants} className="p-1">
                                     <motion.div
@@ -103,8 +78,8 @@ export function CarouselComponent({ title, description }: Props) {
                                         }}
                                         transition={{ type: "spring", stiffness: 300 }}
                                     >
-                                        <Card dir="rtl" className="transition-shadow hover:shadow-xl cursor-pointer">
-                                            <CardContent className="flex flex-col gap-3 h-30 items-center justify-center p-6">
+                                        <Card dir="rtl" className="cursor-pointer transition-shadow hover:shadow-xl">
+                                            <CardContent className="flex h-30 flex-col items-center justify-center gap-3 p-6">
                                                 <motion.div
                                                     whileHover={{ rotate: 5 }}
                                                     transition={{ type: "spring", stiffness: 200 }}
@@ -118,9 +93,7 @@ export function CarouselComponent({ title, description }: Props) {
                                                     />
                                                 </motion.div>
 
-                                                <p className="font-semibold text-text-muted">
-                                                    {category.title}
-                                                </p>
+                                                <p className="text-text-muted font-semibold">{category.title}</p>
                                             </CardContent>
                                         </Card>
                                     </motion.div>
@@ -144,8 +117,7 @@ export function CarouselComponent({ title, description }: Props) {
                         <CarouselNext />
                     </motion.div>
                 </motion.div>
-
             </Carousel>
         </div>
-    )
+    );
 }

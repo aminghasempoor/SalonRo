@@ -44,4 +44,4 @@ export const categories = [
         title: "ژل و بوتاکس",
         image: "/images/categories/ژل.jpg",
     },
-]
+];
