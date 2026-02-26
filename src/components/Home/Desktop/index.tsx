@@ -1,6 +1,7 @@
 import BannerComponent from "./Banner";
-import Categories from "@/components/Home/Desktop/Categories";
-import Reservation from "@/components/Home/Desktop/Reservation";
+import Categories from "./Categories";
+import Reservation from "./Reservation";
+import Salons from "./Salons";
 
 export default function DesktopHome() {
     return (
@@ -8,6 +9,7 @@ export default function DesktopHome() {
             <BannerComponent />
             <Categories />
             <Reservation />
+            <Salons />
         </div>
     );
 }

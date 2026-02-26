@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/UI/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/UI/Carousel";
-import { categories } from "@/data/mockCategories";
+import {salons} from "@/data/mockCategories";
 import Image from "next/image";
 import { easeOut, motion } from "framer-motion";
 
@@ -65,10 +65,10 @@ export function CarouselComponent({ title, description }: Props) {
                 {/* 🔥 Animated Carousel Items */}
                 <motion.div variants={containerVariants} initial="hidden" animate="show">
                     <CarouselContent>
-                        {categories.map((category) => (
+                        {salons.map((category) => (
                             <CarouselItem
                                 key={category.id}
-                                className="after:bg-border relative after:absolute after:top-1/2 after:left-2 after:h-[50%] after:w-px after:-translate-y-1/2 after:content-[''] last:after:hidden md:basis-1/3 lg:basis-1/6"
+                                className="after:bg-border relative after:absolute after:top-1/2 after:left-2 after:h-[60%] after:w-px after:-translate-y-1/2 after:content-[''] last:after:hidden md:basis-1/3 lg:basis-1/5"
                             >
                                 <motion.div variants={itemVariants} className="p-1">
                                     <motion.div
@@ -79,21 +79,22 @@ export function CarouselComponent({ title, description }: Props) {
                                         transition={{ type: "spring", stiffness: 300 }}
                                     >
                                         <Card dir="rtl" className="cursor-pointer transition-shadow hover:shadow-xl">
-                                            <CardContent className="flex h-30 flex-col items-center justify-center gap-3 p-6">
+                                            <CardContent className="flex h-30 flex-col items-center justify-center gap-3 ">
                                                 <motion.div
                                                     whileHover={{ rotate: 5 }}
                                                     transition={{ type: "spring", stiffness: 200 }}
+                                                    className="h-full"
                                                 >
                                                     <Image
                                                         src={category.image}
-                                                        alt={category.title}
-                                                        width={80}
-                                                        height={80}
-                                                        className="rounded-full"
+                                                        alt={category.salon_name}
+                                                        width={200}
+                                                        height={500}
+                                                        className="rounded-xl"
                                                     />
                                                 </motion.div>
 
-                                                <p className="text-text-muted font-semibold">{category.title}</p>
+                                                <p className="text-text-muted font-semibold">{category.salon_name}</p>
                                             </CardContent>
                                         </Card>
                                     </motion.div>
