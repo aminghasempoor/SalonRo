@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/UI/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/UI/Carousel";
-import {salons} from "@/data/mockCategories";
+import { salons } from "@/data/mockCategories";
 import Image from "next/image";
 import { easeOut, motion } from "framer-motion";
 
@@ -79,7 +79,7 @@ export function CarouselComponent({ title, description }: Props) {
                                         transition={{ type: "spring", stiffness: 300 }}
                                     >
                                         <Card dir="rtl" className="cursor-pointer transition-shadow hover:shadow-xl">
-                                            <CardContent className="flex h-30 flex-col items-center justify-center gap-3 ">
+                                            <CardContent className="flex h-30 flex-col items-center justify-center gap-3">
                                                 <motion.div
                                                     whileHover={{ rotate: 5 }}
                                                     transition={{ type: "spring", stiffness: 200 }}
