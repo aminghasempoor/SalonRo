@@ -131,6 +131,7 @@ body {
     /* =====================
        Primary (Purple)
     ====================== */
+    --color-primary-50: #140B4E;
     --color-primary-100: #7d34b9;
     --color-primary-200: #9a5cff;
     --color-primary-300: #b38bff;
@@ -191,6 +192,7 @@ body {
     --color-text-muted: #9ca3af;
 
     --color-primary-100: #b38bff;
+    --color-primary-50: #140B4E;
     --color-primary-200: #9a5cff;
     --color-primary-300: #7d34b9;
 
