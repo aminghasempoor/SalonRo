@@ -19,3 +19,6 @@ export { default as MarkerIcon } from "&/icons/marker-icon.svg";
 export { default as MarkerPreviewIcon } from "&/icons/marker-preview.svg";
 export { default as ArrowRight } from "&/icons/arrow-right.svg";
 export { default as ArrowLeft } from "&/icons/arrow-left.svg";
+export { default as DownloadIcon } from "&/icons/download.svg";
+export { default as GooglePlayDownloadIcon } from "&/icons/google-play.svg";
+export { default as QrcodeIcon } from "&/icons/qrcode.svg";

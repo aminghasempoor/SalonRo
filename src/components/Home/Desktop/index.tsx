@@ -2,6 +2,7 @@ import BannerComponent from "./Banner";
 import Categories from "./Categories";
 import Reservation from "./Reservation";
 import Salons from "./Salons";
+import App from "@/components/Home/Desktop/app";
 
 export default function DesktopHome() {
     return (
@@ -10,6 +11,7 @@ export default function DesktopHome() {
             <Categories />
             <Reservation />
             <Salons />
+            <App />
         </div>
     );
 }
